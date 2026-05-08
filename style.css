@@ -392,14 +392,14 @@ form button:hover{
 
 }
 .footer{
-  background:#007676;
+  background:#41a4dd;
   color:white;
   padding:70px 8%;
 }
 
 .footer-container{
   display:grid;
-  grid-template-columns:1.4fr 1.2fr 1fr 1.2fr;
+  grid-template-columns:1.5fr 1.4fr 1fr 1.3fr;
   gap:45px;
   max-width:1200px;
   margin:auto;
@@ -465,4 +465,10 @@ form button:hover{
   .footer-logo{
     width:150px;
   }
+}
+.footer-col p{
+  white-space:nowrap;
+}
+.footer-about p{
+  white-space:normal;
 }
