@@ -5,7 +5,7 @@
 }
 
 body{
-  font-family:'Poppins', sans-serif;
+  font-family:'Poppins', Arial, sans-serif;
   background:#f8fafc;
   color:#222;
 }
@@ -14,11 +14,11 @@ body{
 
 .navbar{
   width:100%;
-  padding:10px 8%;
+  padding:12px 8%;
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:120px;
+  gap:80px;
   background:white;
   position:sticky;
   top:0;
@@ -27,15 +27,15 @@ body{
 }
 
 .logo img{
-  height:48px;
+  height:55px;
 }
 
 .navbar ul{
   display:flex;
   list-style:none;
   gap:12px;
-  background:#ffffff;
-  padding:14px 22px;
+  background:white;
+  padding:14px 24px;
   border-radius:50px;
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
@@ -54,18 +54,15 @@ body{
   color:white;
 }
 
-/* HERO */
+/* HERO TRANG CHỦ */
 
 .hero{
-  min-height:90vh;
-
+  min-height:85vh;
   display:flex;
   justify-content:space-between;
   align-items:center;
-
-  padding:80px 8%;
-
-  background:linear-gradient(135deg,#e0f2fe,#f8fafc);
+  padding:70px 8%;
+  background:linear-gradient(135deg,#e0f2fe,#ffffff);
 }
 
 .hero-text{
@@ -80,7 +77,7 @@ body{
 }
 
 .hero h1{
-  font-size:68px;
+  font-size:64px;
   line-height:1.1;
   margin-bottom:25px;
   color:#0f172a;
@@ -92,8 +89,6 @@ body{
   color:#475569;
   margin-bottom:35px;
 }
-
-/* BUTTON */
 
 .buttons{
   display:flex;
@@ -129,8 +124,6 @@ body{
   color:white;
 }
 
-/* HERO IMAGE */
-
 .hero-image{
   width:42%;
 }
@@ -138,9 +131,7 @@ body{
 .hero-image img{
   width:100%;
   border-radius:35px;
-
   box-shadow:0 25px 60px rgba(0,0,0,0.2);
-
   transition:0.5s;
 }
 
@@ -148,12 +139,12 @@ body{
   transform:scale(1.03);
 }
 
-/* SECTION */
+/* SECTION CHUNG */
 
 .info,
 .courses,
 .contact{
-  padding:90px 8%;
+  padding:80px 8%;
 }
 
 h2{
@@ -161,6 +152,30 @@ h2{
   font-size:42px;
   margin-bottom:50px;
   color:#0f172a;
+}
+
+/* TRANG CON */
+
+.page-header{
+  padding:90px 8%;
+  text-align:center;
+  background:linear-gradient(135deg,#dbeafe,#f8fafc);
+}
+
+.page-header h1{
+  font-size:52px;
+  margin-bottom:20px;
+  color:#0f172a;
+}
+
+.page-header p{
+  font-size:20px;
+  color:#475569;
+}
+
+.page-content{
+  padding:80px 8%;
+  background:#f8fafc;
 }
 
 /* CARD */
@@ -176,22 +191,20 @@ h2{
 .card,
 .course{
   width:320px;
-
+  min-height:320px;
   background:white;
-
   padding:35px;
-
   border-radius:25px;
-
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
   transition:0.4s;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
 .card:hover,
 .course:hover{
   transform:translateY(-12px);
-
   box-shadow:0 20px 40px rgba(0,0,0,0.12);
 }
 
@@ -208,7 +221,27 @@ h2{
   color:#475569;
 }
 
-/* CONTACT */
+.card button,
+.course button{
+  margin-top:20px;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#0ea5e9;
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.card button:hover,
+.course button:hover{
+  background:#0284c7;
+  transform:translateY(-3px);
+}
+
+/* FORM LIÊN HỆ */
 
 .contact{
   background:white;
@@ -216,41 +249,30 @@ h2{
 
 form{
   max-width:550px;
-
   margin:auto;
-
   display:flex;
   flex-direction:column;
   gap:18px;
 }
 
-form input{
+form input,
+form textarea,
+form select{
   padding:18px;
-
   border-radius:14px;
-
   border:1px solid #cbd5e1;
-
   font-size:16px;
 }
 
 form button{
   padding:18px;
-
   border:none;
-
   border-radius:14px;
-
   background:#0ea5e9;
-
   color:white;
-
   font-size:18px;
-
   font-weight:600;
-
   cursor:pointer;
-
   transition:0.3s;
 }
 
@@ -258,35 +280,40 @@ form button:hover{
   background:#0284c7;
 }
 
-/* SOCIAL BUTTON */
+/* FOOTER */
+
+.footer{
+  background:#0f172a;
+  color:white;
+  padding:50px 8%;
+  text-align:center;
+  line-height:2;
+}
+
+.footer h3{
+  margin-bottom:20px;
+  color:#38bdf8;
+}
+
+/* NÚT ZALO FACEBOOK */
 
 .social-buttons{
   position:fixed;
-
   right:20px;
   bottom:20px;
-
   display:flex;
   flex-direction:column;
-
   gap:12px;
-
   z-index:999;
 }
 
 .social-buttons a{
   padding:14px 20px;
-
   border-radius:50px;
-
   color:white;
-
   text-decoration:none;
-
   font-weight:600;
-
   box-shadow:0 10px 20px rgba(0,0,0,0.15);
-
   transition:0.3s;
 }
 
@@ -308,17 +335,20 @@ form button:hover{
 
   .navbar{
     flex-direction:column;
-    gap:20px;
+    gap:18px;
+    padding:15px 5%;
   }
 
   .navbar ul{
     flex-wrap:wrap;
     justify-content:center;
+    border-radius:25px;
   }
 
   .hero{
     flex-direction:column;
     text-align:center;
+    padding:60px 6%;
   }
 
   .hero-text,
@@ -337,6 +367,27 @@ form button:hover{
   .buttons{
     justify-content:center;
     flex-wrap:wrap;
+  }
+
+  .page-header{
+    padding:70px 6%;
+  }
+
+  .page-header h1{
+    font-size:38px;
+  }
+
+  .page-content{
+    padding:60px 6%;
+  }
+
+  .card,
+  .course{
+    width:100%;
+  }
+
+  h2{
+    font-size:34px;
   }
 
 }
