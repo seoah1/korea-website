@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+header {
+  background: linear-gradient(135deg, #ff4f81, #3b82f6);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+nav {
+  background: #111827;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff4f81;
+}
+
+section {
+  padding: 50px 10%;
+}
+
+h2 {
+  color: #111827;
+  font-size: 30px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  width: 280px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.card:hover{
+   transform:translateY(-10px) scale(1.03);
+}
+
+.card h3 {
+  color: #ef476f;
+}
+
+.course {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+button {
+  background: #ef476f;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #d6336c;
+}
+
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+.banner-image{
+   width:100%;
+   height:500px;
+   object-fit:cover;
+}
+@media(max-width:768px){
+
+   header h1{
+      font-size:32px;
+   }
+
+   .cards{
+      flex-direction:column;
+      align-items:center;
+   }
+
+   .banner-image{
+      height:250px;
+   }
+
+}
+.register-form {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.register-form input,
+.register-form select,
+.register-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.register-form textarea {
+  height: 120px;
+}
+.contact-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-buttons a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.zalo-btn {
+  background: #0068ff;
+}
+
+.facebook-btn {
+  background: #1877f2;
+}
