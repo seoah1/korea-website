@@ -629,5 +629,200 @@ form button:hover{
 
     font-size:22px;
   }
+/* ===============================
+   KHOA HOC PAGE
+================================ */
 
+.course-hero {
+  position: relative;
+  padding: 60px 7%;
+  background: linear-gradient(#f8fcff, #eaf6ff);
+  overflow: hidden;
+}
+
+.course-title {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.course-title h1 {
+  font-size: 52px;
+  color: #0d2d63;
+  margin-bottom: 12px;
+}
+
+.course-title p {
+  font-size: 22px;
+  color: #56647c;
+}
+
+.course-roadmap {
+  position: relative;
+  height: 660px;
+  margin-top: 40px;
+}
+
+.course-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  z-index: 1;
+}
+
+.course-road {
+  position: absolute;
+  left: 50%;
+  bottom: 90px;
+  transform: translateX(-50%);
+  width: 1050px;
+  max-width: 100%;
+  z-index: 2;
+}
+
+.course-palace {
+  position: absolute;
+  left: 48%;
+  bottom: 130px;
+  width: 210px;
+  z-index: 3;
+}
+
+.course-student {
+  position: absolute;
+  right: 1%;
+  bottom: 0;
+  width: 280px;
+  z-index: 4;
+}
+
+.course-card {
+  position: absolute;
+  width: 260px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 20px 45px rgba(16, 72, 140, 0.14);
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+}
+
+.course-tag {
+  display: inline-block;
+  background: linear-gradient(90deg, #0f66dd, #318fff);
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+}
+
+.course-card p {
+  color: #17305e;
+  font-size: 17px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.course-card span {
+  display: block;
+  background: #eaf3ff;
+  color: #0f66dd;
+  text-align: center;
+  font-weight: 700;
+  padding: 9px 12px;
+  border-radius: 24px;
+  margin-bottom: 16px;
+}
+
+.course-price {
+  border-top: 2px dashed #d7e5f5;
+  padding-top: 16px;
+  text-align: center;
+  color: #0f66dd;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.course-card-1 {
+  left: 2%;
+  top: 190px;
+}
+
+.course-card-2 {
+  left: 29%;
+  top: 85px;
+}
+
+.course-card-3 {
+  left: 55%;
+  top: 50px;
+}
+
+.course-card-4 {
+  right: 2%;
+  top: 0;
+}
+
+.course-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(16, 72, 140, 0.12);
+  position: relative;
+  z-index: 5;
+}
+
+.course-features h4 {
+  color: #17305e;
+  margin-bottom: 8px;
+}
+
+.course-features p {
+  color: #5f6f86;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+  .course-title h1 {
+    font-size: 36px;
+  }
+
+  .course-roadmap {
+    height: auto;
+    display: grid;
+    gap: 24px;
+  }
+
+  .course-bg,
+  .course-road,
+  .course-palace,
+  .course-student {
+    display: none;
+  }
+
+  .course-card,
+  .course-card-1,
+  .course-card-2,
+  .course-card-3,
+  .course-card-4 {
+    position: static;
+    width: 100%;
+  }
+
+  .course-features {
+    grid-template-columns: 1fr;
+  }
+}
 }
