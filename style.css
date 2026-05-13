@@ -472,3 +472,162 @@ form button:hover{
 .footer-about p{
   white-space:normal;
 }
+/* =========================
+   ROADMAP STYLE - INT KOREAN
+========================= */
+
+.roadmap{
+  padding:100px 8%;
+  background:#f8fafc;
+}
+
+.roadmap h2{
+
+  text-align:center;
+
+  font-size:42px;
+
+  margin-bottom:60px;
+
+  color:#0f172a;
+}
+
+.roadmap-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:30px;
+}
+
+.roadmap-card{
+
+  background:white;
+
+  padding:45px;
+
+  border-radius:30px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.05);
+
+  transition:0.35s;
+
+  border:1px solid #eef2ff;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.roadmap-card:hover{
+
+  transform:
+    translateY(-12px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08);
+}
+
+.roadmap-card h3{
+
+  font-size:30px;
+
+  margin-bottom:22px;
+
+  color:#0f172a;
+}
+
+.roadmap-card p{
+
+  color:#64748b;
+
+  line-height:1.9;
+
+  font-size:17px;
+}
+
+.topik{
+
+  display:inline-block;
+
+  margin-top:22px;
+
+  background:#dbeafe;
+
+  color:#2563eb;
+
+  padding:10px 20px;
+
+  border-radius:999px;
+
+  font-size:14px;
+
+  font-weight:600;
+}
+
+.price{
+
+  margin-top:28px;
+
+  display:inline-block;
+
+  background:
+    linear-gradient(
+      135deg,
+      #60a5fa,
+      #2563eb
+    );
+
+  color:white;
+
+  padding:14px 24px;
+
+  border-radius:999px;
+
+  font-size:26px;
+
+  font-weight:700;
+
+  box-shadow:
+    0 10px 25px rgba(37,99,235,0.25);
+
+  transition:0.3s;
+}
+
+.roadmap-card:hover .price{
+
+  transform:scale(1.05);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .roadmap-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .roadmap h2{
+
+    font-size:34px;
+  }
+
+  .roadmap-card{
+
+    padding:35px;
+  }
+
+  .roadmap-card h3{
+
+    font-size:26px;
+  }
+
+  .price{
+
+    font-size:22px;
+  }
+
+}
