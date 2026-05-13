@@ -606,29 +606,27 @@ form button:hover{
 @media(max-width:768px){
 
   .roadmap-grid{
-
     grid-template-columns:1fr;
   }
 
   .roadmap h2{
-
     font-size:34px;
   }
 
   .roadmap-card{
-
     padding:35px;
   }
 
   .roadmap-card h3{
-
     font-size:26px;
   }
 
   .price{
-
     font-size:22px;
   }
+
+}
+
 /* ===============================
    KHOA HOC PAGE
 ================================ */
@@ -824,5 +822,4 @@ form button:hover{
   .course-features {
     grid-template-columns: 1fr;
   }
-}
 }
