@@ -823,3 +823,64 @@ form button:hover{
     grid-template-columns: 1fr;
   }
 }
+.document-card{
+  text-decoration:none;
+  color:inherit;
+}
+
+.document-detail{
+  padding:90px 8%;
+  min-height:70vh;
+  background:#f8fafc;
+}
+
+.document-detail h1{
+  text-align:center;
+  font-size:48px;
+  margin-bottom:15px;
+  color:#0f172a;
+}
+
+.document-detail p{
+  text-align:center;
+  color:#64748b;
+  margin-bottom:50px;
+}
+
+.download-list{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  gap:20px;
+}
+
+.download-item{
+  background:white;
+  padding:25px 30px;
+  border-radius:20px;
+  text-decoration:none;
+  color:#0f172a;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:0.3s;
+}
+
+.download-item:hover{
+  transform:translateY(-5px);
+}
+
+.download-item span{
+  font-size:18px;
+  font-weight:600;
+}
+
+.download-item button{
+  border:none;
+  background:#0ea5e9;
+  color:white;
+  padding:12px 18px;
+  border-radius:10px;
+  cursor:pointer;
+}
