@@ -1259,3 +1259,34 @@ form button:hover{
     display: block !important;
   }
 }
+/* =========================
+   FIX DESKTOP + MOBILE MENU
+========================= */
+
+@media (min-width: 769px) {
+
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .navbar ul {
+    display: flex !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .navbar ul {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: block !important;
+  }
+
+}
