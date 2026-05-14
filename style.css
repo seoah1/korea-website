@@ -1590,3 +1590,14 @@ form button:hover{
     grid-column: 1;
   }
 }
+/* VERSION GỌN HƠN */
+
+.page-content{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
