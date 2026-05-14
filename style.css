@@ -1448,3 +1448,9 @@ form button:hover{
   border-radius:16px !important;
   margin:14px 0 18px !important;
 }
+.page-content > p{
+  text-align:center;
+  max-width:1000px;
+  margin:-20px auto 40px;
+  line-height:1.8;
+}
