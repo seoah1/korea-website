@@ -1296,3 +1296,40 @@ form button:hover{
   }
 
 }
+/* =========================
+   COURSE HERO BACKGROUND
+========================= */
+
+.course-hero{
+  position: relative;
+  padding: 80px 6%;
+  background-image: url("images/khoa-hoc-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Lớp phủ trắng nhẹ */
+
+.course-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0.35);
+}
+
+/* Đưa nội dung nổi lên trên */
+
+.course-title,
+.course-roadmap,
+.course-features{
+  position:relative;
+  z-index:2;
+}
+
+/* Khoảng cách đẹp hơn */
+
+.course-roadmap{
+  margin-top:50px;
+}
