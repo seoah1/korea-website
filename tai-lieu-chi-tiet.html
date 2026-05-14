@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tài liệu tiếng Hàn - INT</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<nav class="navbar">
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/int-logo.png" alt="INT Edu">
+    </a>
+  </div>
+
+  <ul>
+    <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+    <li><a href="tai-lieu.html">Tài liệu tiếng Hàn</a></li>
+    <li><a href="khoa-hoc.html">Khóa học tiếng Hàn</a></li>
+    <li><a href="du-hoc.html">Du học Hàn Quốc</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+
+</nav>
+
+<!-- DETAIL -->
+
+<section class="document-detail">
+
+  <h1 id="document-title">
+    Tài liệu tiếng Hàn
+  </h1>
+
+  <p id="document-desc">
+    Danh sách tài liệu tải về
+  </p>
+
+  <div id="document-list" class="download-list"></div>
+
+</section>
+
+<script>
+
+const data = {
+
+  "tong-hop": {
+
+    title: "Giáo trình tiếng Hàn tổng hợp",
+
+    desc: "Danh sách giáo trình tiếng Hàn tổng hợp.",
+
+    files: [
+
+      ["Giáo trình tổng hợp sơ cấp 1",
+      "pdf/tong-hop-so-cap-1.pdf"],
+
+      ["Bài tập tổng hợp sơ cấp 1",
+      "pdf/bt-tong-hop-so-cap-1.pdf"]
+
+    ]
+  },
+
+  "seoul": {
+
+    title: "Giáo trình tiếng Hàn Seoul",
+
+    desc: "Danh sách giáo trình Seoul.",
+
+    files: [
+
+      ["Seoul Korean 1A", "#"],
+      ["Seoul Korean 1B", "#"]
+
+    ]
+  },
+
+  "yonsei": {
+
+    title: "Giáo trình tiếng Hàn Yonsei",
+
+    desc: "Danh sách giáo trình Yonsei.",
+
+    files: [
+
+      ["Yonsei Korean 1", "#"],
+      ["Yonsei Korean 2", "#"]
+
+    ]
+  },
+
+  "topik": {
+
+    title: "Tài liệu TOPIK",
+
+    desc: "Danh sách tài liệu luyện thi TOPIK.",
+
+    files: [
+
+      ["TOPIK Reading", "#"],
+      ["TOPIK Listening", "#"]
+
+    ]
+  },
+
+  "ngu-phap": {
+
+    title: "Ngữ pháp tiếng Hàn",
+
+    desc: "Danh sách tài liệu ngữ pháp tiếng Hàn.",
+
+    files: [
+
+      ["Ngữ pháp sơ cấp", "#"],
+      ["Ngữ pháp trung cấp", "#"]
+
+    ]
+  },
+
+  "khac": {
+
+    title: "Tài liệu bổ ích khác",
+
+    desc: "Danh sách tài liệu mở rộng.",
+
+    files: [
+
+      ["Tiếng Hàn du lịch", "#"],
+      ["Tiếng Hàn thương mại", "#"]
+
+    ]
+  }
+
+};
+
+const params = new URLSearchParams(window.location.search);
+
+const category = params.get("category");
+
+const currentData = data[category];
+
+document.getElementById("document-title").innerText =
+currentData.title;
+
+document.getElementById("document-desc").innerText =
+currentData.desc;
+
+const list = document.getElementById("document-list");
+
+currentData.files.forEach(file => {
+
+  list.innerHTML += `
+
+    <a href="${file[1]}"
+       class="download-item"
+       target="_blank">
+
+      <span>${file[0]}</span>
+
+      <button>Tải xuống</button>
+
+    </a>
+
+  `;
+});
+
+</script>
+
+</body>
+</html>
