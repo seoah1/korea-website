@@ -17,21 +17,35 @@
 
 <nav class="navbar">
 
+  <button class="menu-toggle" onclick="openMenu()">
+    ☰
+  </button>
+
   <div class="logo">
     <a href="index.html">
-      <img src="images/int-logo.png" alt="INT Korean">
+      <img src="images/int-logo.png" alt="INT Edu">
     </a>
   </div>
 
-  <ul>
-    <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-    <li><a href="tai-lieu.html">Tài liệu tiếng Hàn</a></li>
-    <li><a href="khoa-hoc.html">Khóa học tiếng Hàn</a></li>
-    <li><a href="du-hoc.html">Du học Hàn Quốc</a></li>
-    <li><a href="blog.html">Blog</a></li>
-  </ul>
-
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+
+  <button class="close-menu" onclick="closeMenu()">
+    ×
+  </button>
+
+  <div class="mobile-logo">
+    <img src="images/int-logo.png" alt="INT Edu">
+  </div>
+
+  <a href="gioi-thieu.html">Giới Thiệu</a>
+  <a href="tai-lieu.html">Tài liệu tiếng Hàn</a>
+  <a href="khoa-hoc.html">Khóa học tiếng Hàn</a>
+  <a href="du-hoc.html">Du học Hàn Quốc</a>
+  <a href="blog.html">Blog</a>
+
+</div>
 
 <!-- HERO -->
 
@@ -223,6 +237,14 @@
   </a>
 
 </div>
+<script>
+  function openMenu() {
+    document.getElementById("mobileMenu").classList.add("active");
+  }
 
+  function closeMenu() {
+    document.getElementById("mobileMenu").classList.remove("active");
+  }
+</script>
 </body>
 </html>
