@@ -1300,6 +1300,12 @@ form button:hover{
    COURSE HERO BACKGROUND
 ========================= */
 
+/* =========================
+   COURSE HERO
+========================= */
+
+/* DESKTOP */
+
 .course-hero{
   position: relative;
   padding: 80px 6%;
@@ -1308,6 +1314,43 @@ form button:hover{
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+
+/* Overlay trắng nhẹ */
+
+.course-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0.35);
+}
+
+/* Nội dung nổi lên */
+
+.course-title,
+.course-roadmap,
+.course-features{
+  position:relative;
+  z-index:2;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+  .course-hero{
+
+    background-image: url("images/trung-tam-int.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    padding: 60px 5%;
+  }
+
 }
 
 /* Lớp phủ trắng nhẹ */
