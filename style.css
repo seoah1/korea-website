@@ -1376,3 +1376,60 @@ form button:hover{
 .course-roadmap{
   margin-top:50px;
 }
+/* =========================
+   COURSE FEATURES WITH ICONS
+========================= */
+
+.course-features {
+  max-width: 1180px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  background: #ffffff;
+  padding: 24px 32px;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(15, 103, 221, 0.12);
+}
+
+.course-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.feature-icon {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  border-radius: 16px;
+  background: #eef6ff;
+  color: #0f66dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.course-feature-item h4 {
+  font-size: 18px;
+  color: #0d2d63;
+  margin-bottom: 4px;
+}
+
+.course-feature-item p {
+  font-size: 15px;
+  color: #5f6f86;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .course-features {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .course-feature-item {
+    align-items: flex-start;
+  }
+}
