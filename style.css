@@ -1454,3 +1454,139 @@ form button:hover{
   margin:-20px auto 40px;
   line-height:1.8;
 }
+/* =========================
+   BLOG CATEGORY BOXES
+========================= */
+
+.blog-section {
+  padding: 80px 8%;
+  background: #f8fafc;
+}
+
+.blog-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.blog-box {
+  background: white;
+  border-radius: 26px;
+  padding: 34px 28px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 16px 40px rgba(15, 103, 221, 0.08);
+  transition: 0.35s;
+  border: 1px solid #e0f2fe;
+}
+
+.blog-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 50px rgba(15, 103, 221, 0.14);
+}
+
+.blog-icon {
+  width: 64px;
+  height: 64px;
+  background: #e0f2fe;
+  color: #0ea5e9;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  margin-bottom: 22px;
+}
+
+.blog-box h3 {
+  font-size: 24px;
+  color: #0284c7;
+  margin-bottom: 12px;
+}
+
+.blog-box p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* =========================
+   BLOG POST LIST
+========================= */
+
+.blog-post-section {
+  padding: 80px 8%;
+  background: #f8fafc;
+}
+
+.post-list {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  gap: 18px;
+}
+
+.post-item {
+  background: white;
+  padding: 24px 28px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 12px 32px rgba(15, 103, 221, 0.08);
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 12px 20px;
+  transition: 0.3s;
+}
+
+.post-item:hover {
+  transform: translateY(-5px);
+}
+
+.post-item span {
+  width: 42px;
+  height: 42px;
+  background: #0ea5e9;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.post-item h3 {
+  color: #0f172a;
+  font-size: 22px;
+}
+
+.post-item p {
+  grid-column: 2;
+  color: #64748b;
+}
+
+@media (max-width: 1000px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-section,
+  .blog-post-section {
+    padding: 55px 6%;
+  }
+
+  .post-item {
+    grid-template-columns: 1fr;
+  }
+
+  .post-item p {
+    grid-column: 1;
+  }
+}

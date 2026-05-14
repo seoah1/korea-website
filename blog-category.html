@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Danh sách bài viết - INT</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <button class="menu-toggle" onclick="openMenu()">☰</button>
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/int-logo.png" alt="INT Edu">
+    </a>
+  </div>
+
+  <ul>
+    <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+    <li><a href="tai-lieu.html">Tài liệu tiếng Hàn</a></li>
+    <li><a href="khoa-hoc.html">Khóa học tiếng Hàn</a></li>
+    <li><a href="du-hoc.html">Du học Hàn Quốc</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+
+  <button class="close-menu" onclick="closeMenu()">×</button>
+
+  <div class="mobile-logo">
+    <img src="images/int-logo.png" alt="INT Edu">
+  </div>
+
+  <a href="gioi-thieu.html">Giới Thiệu</a>
+  <a href="tai-lieu.html">Tài liệu tiếng Hàn</a>
+  <a href="khoa-hoc.html">Khóa học tiếng Hàn</a>
+  <a href="du-hoc.html">Du học Hàn Quốc</a>
+  <a href="blog.html">Blog</a>
+
+</div>
+
+<section class="page-header">
+  <h1 id="category-title">Blog Hàn Quốc</h1>
+  <p id="category-desc">Danh sách bài viết liên quan</p>
+</section>
+
+<section class="blog-post-section">
+
+  <div id="post-list" class="post-list"></div>
+
+</section>
+
+<script>
+const blogData = {
+  "van-hoa": {
+    title: "Văn hóa Hàn Quốc",
+    desc: "Tìm hiểu phong tục, đời sống và con người Hàn Quốc.",
+    posts: [
+      "Văn hóa cúi chào của người Hàn",
+      "Vì sao người Hàn coi trọng tuổi tác?",
+      "Văn hóa ăn uống của người Hàn",
+      "Những điều cấm kỵ tại Hàn Quốc",
+      "Các lễ hội truyền thống Hàn Quốc"
+    ]
+  },
+
+  "kpop": {
+    title: "Kpop & Giải trí",
+    desc: "Khám phá Kpop, idol và ngành giải trí Hàn Quốc.",
+    posts: [
+      "BTS vì sao nổi tiếng toàn cầu?",
+      "BLACKPINK có gì đặc biệt?",
+      "Thuật ngữ fan Kpop cần biết",
+      "Học tiếng Hàn qua bài hát Kpop",
+      "Các công ty giải trí lớn tại Hàn Quốc"
+    ]
+  },
+
+  "phim": {
+    title: "Phim Hàn Quốc",
+    desc: "Phim, diễn viên và cách học tiếng Hàn qua phim.",
+    posts: [
+      "Top phim Hàn nên xem cho người học tiếng Hàn",
+      "Học tiếng Hàn qua phim như thế nào?",
+      "Những câu nói tiếng Hàn nổi tiếng trong phim",
+      "Phim Hàn giúp luyện nghe tiếng Hàn",
+      "Top phim chữa lành Hàn Quốc"
+    ]
+  },
+
+  "am-thuc": {
+    title: "Ẩm thực Hàn Quốc",
+    desc: "Món ăn, văn hóa ăn uống và từ vựng ẩm thực.",
+    posts: [
+      "Kimchi có nguồn gốc từ đâu?",
+      "Top món ăn Hàn Quốc nổi tiếng",
+      "Tokbokki là gì?",
+      "Ẩm thực đường phố Hàn Quốc",
+      "Từ vựng tiếng Hàn về đồ ăn"
+    ]
+  },
+
+  "du-lich": {
+    title: "Du lịch Hàn Quốc",
+    desc: "Kinh nghiệm du lịch và khám phá Hàn Quốc.",
+    posts: [
+      "Nên du lịch Hàn Quốc mùa nào?",
+      "Top địa điểm check-in ở Seoul",
+      "Kinh nghiệm đi tàu điện ở Hàn Quốc",
+      "Du lịch Busan tự túc",
+      "Đảo Jeju có gì đẹp?"
+    ]
+  },
+
+  "hoc-tieng-han": {
+    title: "Góc học tiếng Hàn",
+    desc: "Tài liệu, lộ trình và kinh nghiệm học tiếng Hàn.",
+    posts: [
+      "Bảng chữ cái tiếng Hàn cho người mới",
+      "Cách tự học tiếng Hàn hiệu quả",
+      "100 câu giao tiếp tiếng Hàn cơ bản",
+      "Ngữ pháp tiếng Hàn sơ cấp",
+      "Bí quyết thi TOPIK đạt điểm cao"
+    ]
+  },
+
+  "du-hoc-han": {
+    title: "Du học Hàn Quốc",
+    desc: "Thông tin visa, chi phí và hồ sơ du học Hàn.",
+    posts: [
+      "Điều kiện du học Hàn Quốc",
+      "Chi phí du học Hàn Quốc",
+      "Visa D4 Hàn Quốc là gì?",
+      "Hồ sơ du học Hàn Quốc gồm những gì?",
+      "Kinh nghiệm phỏng vấn visa Hàn Quốc"
+    ]
+  },
+
+  "khac": {
+    title: "Tin tức & Khác",
+    desc: "Các thông tin hữu ích khác về Hàn Quốc.",
+    posts: [
+      "Các app cần có khi sang Hàn Quốc",
+      "Cuộc sống sinh viên tại Hàn Quốc",
+      "Những điều cần biết trước khi đến Hàn",
+      "Từ vựng tiếng Hàn thông dụng",
+      "Tin tức mới về Hàn Quốc"
+    ]
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+const current = blogData[category] || blogData["van-hoa"];
+
+document.getElementById("category-title").innerText = current.title;
+document.getElementById("category-desc").innerText = current.desc;
+
+const postList = document.getElementById("post-list");
+
+current.posts.forEach((post, index) => {
+  postList.innerHTML += `
+    <a href="#" class="post-item">
+      <span>${index + 1}</span>
+      <h3>${post}</h3>
+      <p>Xem chi tiết bài viết</p>
+    </a>
+  `;
+});
+
+function openMenu() {
+  document.getElementById("mobileMenu").classList.add("active");
+}
+
+function closeMenu() {
+  document.getElementById("mobileMenu").classList.remove("active");
+}
+</script>
+
+</body>
+</html>
