@@ -884,3 +884,8 @@ form button:hover{
   border-radius:10px;
   cursor:pointer;
 }
+.document-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
