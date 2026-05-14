@@ -1440,3 +1440,11 @@ form button:hover{
   border-radius:16px;
   margin:14px 0 18px;
 }
+.card-image{
+  display:block !important;
+  width:100% !important;
+  height:160px !important;
+  object-fit:cover !important;
+  border-radius:16px !important;
+  margin:14px 0 18px !important;
+}
