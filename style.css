@@ -903,3 +903,68 @@ form button:hover{
   border-radius:10px;
   font-weight:600;
 }
+.home-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff, #f0f9ff);
+  border: 1px solid #e0f2fe;
+}
+
+.home-card::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #bae6fd;
+  border-radius: 50%;
+  top: -70px;
+  right: -70px;
+  opacity: 0.55;
+}
+
+.card-icon {
+  width: 62px;
+  height: 62px;
+  background: #e0f2fe;
+  color: #0284c7;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.home-card h3,
+.home-card p,
+.home-card a {
+  position: relative;
+  z-index: 2;
+}
+
+.home-card h3 a {
+  color: #0284c7;
+  text-decoration: none;
+}
+
+.home-card h3 a:hover {
+  color: #075985;
+}
+
+.card-btn {
+  display: inline-block;
+  margin-top: 24px;
+  background: #0ea5e9;
+  color: white !important;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card-btn:hover {
+  background: #0284c7;
+  transform: translateY(-3px);
+}
