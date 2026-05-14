@@ -968,3 +968,177 @@ form button:hover{
   background: #0284c7;
   transform: translateY(-3px);
 }
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    padding: 14px 5%;
+    gap: 14px;
+  }
+
+  .logo img {
+    height: 46px;
+  }
+
+  .navbar ul {
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .navbar ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar a {
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 9px 13px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 6%;
+    min-height: auto;
+  }
+
+  .hero-text,
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .desc {
+    font-size: 16px;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    margin-top: 35px;
+  }
+
+  .info,
+  .courses,
+  .contact,
+  .page-content {
+    padding: 55px 6%;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+  .cards,
+  .course-list {
+    gap: 22px;
+  }
+
+  .card,
+  .course {
+    width: 100%;
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .page-header {
+    padding: 65px 6%;
+  }
+
+  .page-header h1 {
+    font-size: 38px;
+  }
+
+  .page-header p {
+    font-size: 17px;
+  }
+
+  .course-title h1 {
+    font-size: 34px;
+  }
+
+  .course-title p {
+    font-size: 16px;
+  }
+
+  .course-hero {
+    padding: 50px 6%;
+  }
+
+  .course-roadmap {
+    height: auto;
+    display: grid;
+    gap: 22px;
+  }
+
+  .course-bg,
+  .course-road,
+  .course-palace,
+  .course-student {
+    display: none;
+  }
+
+  .course-card,
+  .course-card-1,
+  .course-card-2,
+  .course-card-3,
+  .course-card-4 {
+    position: static;
+    width: 100%;
+  }
+
+  .course-features {
+    grid-template-columns: 1fr;
+    margin-top: 25px;
+  }
+
+  .footer {
+    padding: 45px 6%;
+    text-align: center;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-col p {
+    white-space: normal;
+  }
+
+  .footer-logo {
+    width: 145px;
+  }
+
+  .map-box iframe {
+    height: 230px;
+  }
+
+  .social-buttons {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .social-buttons a {
+    padding: 11px 15px;
+    font-size: 13px;
+  }
+}
